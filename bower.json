@@ -1,0 +1,23 @@
+{
+  "name": "kunstmaan",
+  "version": "0.0.0",
+  "homepage": "https://github.com/LiesbethVanaerschot/kunstmaan",
+  "authors": [
+    "LiesbethVanaerschot <lies.vanaerschot@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "normalize.scss#~4.0.0",
+    "angular-deckgrid": "~0.5.0"
+  }
+}

@@ -1,0 +1,280 @@
+@import '../../bower_components/normalize-scss/sass/normalize.scss';
+@import 'imports/functions';
+@import 'imports/mixins';
+@import 'imports/variables';
+
+body {
+    color: $black;
+    background: $white;
+    margin: 0px;
+    height: 100%;
+}
+
+/*********************
+COMMON
+*********************/
+.container {
+   min-height:100%;
+   position:relative;
+}
+
+.content_wrapper {
+    padding: 0px 10px;
+    margin: 0px auto;
+    max-width: 1240px;
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+.inactive {
+    display: none;
+}
+
+.animate-show {
+    position: fixed !important;
+    overflow-y: scroll;
+    webkit-overflow-scrolling: touch;
+}
+
+.animate-show,
+.animate-hide {
+    transition:all linear 1s;
+}
+
+
+.animate-show.ng-show {
+    opacity: 1;
+}
+
+.animate-show.ng-hide {
+    opacity: 0;
+}
+
+
+.accent {
+    background-color: $accent;
+}
+
+.totalloose {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba($accent, 0.8);
+}
+
+.h2_title {
+    text-transform: uppercase;
+    font-family: $sansseriffont;
+    text-align: center;
+    @include fontSize(15px);
+    margin-top: 5px;
+    padding: 10px 0px;
+    border-bottom: 2px solid $black;
+    border-top: 2px solid $black;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    font-family: $seriffont;
+    @include fontSize(14px);
+}
+
+/*********************
+SIMPLE HEADER
+*********************/
+
+.header {
+    margin: 15px 1% 15px 1%;
+    text-align: center;
+
+    img,
+    h1 {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    h1 {
+        display: block;
+        font-family: $sansseriffont;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 10px 0px;
+        margin-top: 15px;
+        @include fontSize(12px);
+        color: $grey;
+        border-bottom: 2px solid $grey;
+        border-top: 2px solid $grey;
+    }
+
+    img {
+        width: 50px;
+    }
+
+    @include breakpoint(tablet) {
+        margin: 40px 1% 0px 1%;
+        padding: 5px 0px;
+        border-bottom: 1px solid $grey;
+        border-top: 1px solid $grey;
+
+        h1 {
+            display: inline-block;
+            margin-left: 10px; 
+            border: none;
+            color: $black; 
+        }
+    }
+    @include breakpoint(laptop) {
+        h1 {
+           @include fontSize(18px); 
+       }
+    }
+}
+
+/*********************
+PHOTOGALLERY
+*********************/
+
+/* MASONRY GRID SYSTEM */
+.grid {
+    max-width: 100%;
+    padding-left: 0px !important;
+
+    .tile {
+        width: 98%;
+        margin: 10px 1%;
+        left: 0;
+        list-style: none;
+        opacity: 0.8 !important;
+        transition: opacity .5s ease-out;
+        min-height: 200px;
+
+        span {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            left: 8px;
+            top: 8px;
+            @include fontSize(35px);
+            font-weight: 700;
+            color: $white;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            transition: all 1s ease;
+
+            &:hover {
+                transform: rotate(360deg) ;
+            }
+        }
+
+        &:hover {
+            opacity: 1 !important;
+        }
+
+        @include breakpoint(phablet) {
+            width: 48%;
+        }
+        @include breakpoint(tablet) {
+            width: 31.3%;
+
+            span {
+                width: 30px;
+                height: 30px;
+                @include fontSize(25px);
+                line-height: 30px;
+            }
+        }
+        @include breakpoint(laptop) {
+            width: 23%;
+        }
+    }
+
+}
+
+/*********************
+OVERLAY
+*********************/
+
+.overlay {
+    padding: 0px 10px 40px 10px;
+
+    .close {
+        display: block;
+        text-align: right;
+        padding: 15px;
+        cursor: pointer;
+
+        img {
+            width: 30px;
+            transition: all 1s ease;
+
+            &:hover {
+                transform: rotate(360deg) ;
+            }
+        }
+    }
+
+    @include breakpoint(laptop) {
+        padding: 0px 30px 40px 30px;
+        #elemPhoto,
+        .leftpart {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #elemPhoto {
+            width: 66%;
+            margin-right: 20px;
+        }
+        .leftpart {
+            width: 31%;
+        }
+    }
+}
+
+/*********************
+FOOTER
+*********************/
+
+.lifesaver {
+    visibility: hidden;
+    height: 60px;
+}
+
+footer {
+    color: $black;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0px 25px;
+    text-align: center;
+
+    p {
+        margin-right: 10px;
+        @include fontSize(12px);
+    }
+
+    p,
+    img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    img {
+        width: 15px;
+    }
+
+    @include breakpoint(phablet) {
+        text-align: right;
+    }
+}

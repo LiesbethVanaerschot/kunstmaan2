@@ -1,0 +1,239 @@
+/*********************
+REMCALC
+*********************/
+/*********************
+FONTSIZE
+*********************/
+/*********************
+BREAKPOINTS
+*********************/
+/*********************
+FONTS
+*********************/
+/*********************
+COLORS
+*********************/
+body {
+  color: #2e2e2e;
+  background: #fdfdfd;
+  margin: 0px;
+  height: 100%; }
+
+/*********************
+COMMON
+*********************/
+.container {
+  min-height: 100%;
+  position: relative; }
+
+.content_wrapper {
+  padding: 0px 10px;
+  margin: 0px auto;
+  max-width: 1240px; }
+
+.noscroll {
+  overflow: hidden; }
+
+.inactive {
+  display: none; }
+
+.animate-show {
+  position: fixed !important;
+  overflow-y: scroll;
+  webkit-overflow-scrolling: touch; }
+
+.animate-show,
+.animate-hide {
+  -webkit-transition: all linear 1s;
+  transition: all linear 1s; }
+
+.animate-show.ng-show {
+  opacity: 1; }
+
+.animate-show.ng-hide {
+  opacity: 0; }
+
+.accent {
+  background-color: #E4FF35; }
+
+.totalloose {
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(228, 255, 53, 0.8); }
+
+.h2_title {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  margin-top: 5px;
+  padding: 10px 0px;
+  border-bottom: 2px solid #2e2e2e;
+  border-top: 2px solid #2e2e2e; }
+
+img {
+  width: 100%; }
+
+p {
+  font-family: "Noto Serif", serif;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+/*********************
+SIMPLE HEADER
+*********************/
+.header {
+  margin: 15px 1% 15px 1%;
+  text-align: center; }
+  .header img,
+  .header h1 {
+    display: inline-block;
+    vertical-align: middle; }
+  .header h1 {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    margin-top: 15px;
+    font-size: 12px;
+    font-size: 0.75rem;
+    color: #cfcfcf;
+    border-bottom: 2px solid #cfcfcf;
+    border-top: 2px solid #cfcfcf; }
+  .header img {
+    width: 50px; }
+  @media (min-width: 50em) {
+    .header {
+      margin: 40px 1% 0px 1%;
+      padding: 5px 0px;
+      border-bottom: 1px solid #cfcfcf;
+      border-top: 1px solid #cfcfcf; }
+      .header h1 {
+        display: inline-block;
+        margin-left: 10px;
+        border: none;
+        color: #2e2e2e; } }
+  @media (min-width: 64em) {
+    .header h1 {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+
+/*********************
+PHOTOGALLERY
+*********************/
+/* MASONRY GRID SYSTEM */
+.grid {
+  max-width: 100%;
+  padding-left: 0px !important; }
+  .grid .tile {
+    width: 98%;
+    margin: 10px 1%;
+    left: 0;
+    list-style: none;
+    opacity: 0.8 !important;
+    -webkit-transition: opacity .5s ease-out;
+    transition: opacity .5s ease-out;
+    min-height: 200px; }
+    .grid .tile span {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      left: 8px;
+      top: 8px;
+      font-size: 35px;
+      font-size: 2.1875rem;
+      font-weight: 700;
+      color: #fdfdfd;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease; }
+      .grid .tile span:hover {
+        -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+                transform: rotate(360deg); }
+    .grid .tile:hover {
+      opacity: 1 !important; }
+    @media (min-width: 37.5em) {
+      .grid .tile {
+        width: 48%; } }
+    @media (min-width: 50em) {
+      .grid .tile {
+        width: 31.3%; }
+        .grid .tile span {
+          width: 30px;
+          height: 30px;
+          font-size: 25px;
+          font-size: 1.5625rem;
+          line-height: 30px; } }
+    @media (min-width: 64em) {
+      .grid .tile {
+        width: 23%; } }
+
+/*********************
+OVERLAY
+*********************/
+.overlay {
+  padding: 0px 10px 40px 10px; }
+  .overlay .close {
+    display: block;
+    text-align: right;
+    padding: 15px;
+    cursor: pointer; }
+    .overlay .close img {
+      width: 30px;
+      -webkit-transition: all 1s ease;
+      transition: all 1s ease; }
+      .overlay .close img:hover {
+        -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+                transform: rotate(360deg); }
+  @media (min-width: 64em) {
+    .overlay {
+      padding: 0px 30px 40px 30px; }
+      .overlay #elemPhoto,
+      .overlay .leftpart {
+        display: inline-block;
+        vertical-align: top; }
+      .overlay #elemPhoto {
+        width: 66%;
+        margin-right: 20px; }
+      .overlay .leftpart {
+        width: 31%; } }
+
+/*********************
+FOOTER
+*********************/
+.lifesaver {
+  visibility: hidden;
+  height: 60px; }
+
+footer {
+  color: #2e2e2e;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0px 25px;
+  text-align: center; }
+  footer p {
+    margin-right: 10px;
+    font-size: 12px;
+    font-size: 0.75rem; }
+  footer p,
+  footer img {
+    display: inline-block;
+    vertical-align: middle; }
+  footer img {
+    width: 15px; }
+  @media (min-width: 37.5em) {
+    footer {
+      text-align: right; } }
